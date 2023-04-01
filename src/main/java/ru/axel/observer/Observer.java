@@ -8,7 +8,11 @@ public class Observer<T> {
     final List<UpdateMethod<T>> observeMethods = new ArrayList<>();
 
     public Observer(T value) {
-        this.value = value;
+        setValue(value);
+    }
+    public Observer(T value, UpdateMethod<T> updateMethod) {
+        postUpdate(updateMethod);
+        setValue(value);
     }
 
     public T getValue() {
