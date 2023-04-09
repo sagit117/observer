@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Observer<T> {
-    T value;
-    final List<UpdateMethod<T>> observeMethods = new ArrayList<>();
+    private T value;
+    private final List<UpdateMethod<T>> observeMethods = new ArrayList<>();
 
     protected Observer(T value) {
         setValue(value);
